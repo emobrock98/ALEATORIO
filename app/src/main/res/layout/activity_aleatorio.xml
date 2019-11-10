@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AleatorioActivity"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generador de aleatorios"
+        android:gravity="center"
+        android:textSize="35dp"/>
+    <RadioGroup
+        android:id="@+id/grupoRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sin rango específico"
+        android:textSize="15dp"/>
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Con rango específico"
+        android:textSize="15dp"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    <EditText
+        android:id="@+id/minimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="mínimo"
+        android:textSize="25sp"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/maximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="máximo"
+        android:textSize="25sp"
+        android:inputType="number"/>
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_marginTop="30dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25">
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permitir Decimales"
+                android:checked="true"/>
+            <EditText
+                android:id="@+id/decimales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="números de decimales"
+                android:inputType="number" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cúantos quieres generar"/>
+            <EditText
+                android:id="@+id/totales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="número de totales"
+                android:inputType="number"/>
+        </TableRow>
+    </TableLayout>
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/repeat"
+        android:text="Repetir números  "
+        android:layout_marginTop="20dp"
+        android:thumb="@drawable/repeat"/>
+    <ImageButton
+        android:id="@+id/nave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/startup"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
